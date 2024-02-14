@@ -2,7 +2,7 @@ import { sidebarLinks } from "@/constants";
 import Logo from "./Logo";
 
 const LeftSidebar = () => (
-  <div className="col-span-3 pl-40 pr-20 space-y-6">
+  <div className="pl-40 pr-20 space-y-6">
     <Logo />
 
     {/* Navigation / Sidebar Links */}
