@@ -20,13 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="grid grid-cols-12 min-h-screen">
+        <div className="grid min-h-screen grid-cols-12">
           <section className="col-span-3">
             <LeftSidebar />
           </section>
 
           {/* Home Feed */}
-          <section className="col-span-4 border-r border-l border-gray-600">
+          <section className="col-span-4 border-l border-r border-gray-600">
             {children}
           </section>
 

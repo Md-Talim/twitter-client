@@ -2,7 +2,7 @@ import { sidebarLinks } from "@/constants";
 import Logo from "./Logo";
 
 const LeftSidebar = () => (
-  <div className="pl-40 pr-20 space-y-6">
+  <div className="space-y-6 pl-40 pr-20">
     <Logo />
 
     {/* Navigation / Sidebar Links */}
@@ -11,7 +11,7 @@ const LeftSidebar = () => (
         {sidebarLinks.map(({ title, Icon }) => (
           <li
             key={title}
-            className="flex gap-x-4 px-4 py-2 items-center hover:bg-gray-800 w-fit rounded-full cursor-pointer"
+            className="flex w-fit cursor-pointer items-center gap-x-4 rounded-full px-4 py-2 hover:bg-gray-800"
           >
             <div>
               <Icon />
@@ -24,7 +24,7 @@ const LeftSidebar = () => (
 
     {/* Post Button */}
     <div>
-      <button className="bg-blue-500 text-lg font-semibold w-full rounded-full py-2">
+      <button className="w-full rounded-full bg-blue-500 py-2 text-lg font-semibold">
         Post
       </button>
     </div>

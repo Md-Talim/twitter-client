@@ -8,18 +8,18 @@ import {
 
 const FeedCard = () => {
   return (
-    <article className="grid grid-cols-12 px-4 hover:bg-gray-800 border-t border-gray-600 cursor-pointer">
+    <article className="grid cursor-pointer grid-cols-12 border-t border-gray-600 px-4 hover:bg-gray-800">
       <div className="col-span-1 py-4">
         <Image
           src="/vercel.svg"
           height={50}
           width={50}
           alt="Profile photo"
-          className="w-[50px] rounded-full aspect-square"
+          className="aspect-square w-[50px] rounded-full"
         />
       </div>
 
-      <div className="col-span-10 p-4 space-y-4">
+      <div className="col-span-10 space-y-4 p-4">
         <div>
           <div className="flex gap-x-2">
             <p className="text-lg font-semibold">Talim</p>
