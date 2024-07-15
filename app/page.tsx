@@ -1,4 +1,4 @@
-import FeedCard from "@/components/FeedCard";
+import FeedCard from "@/components/feed-card";
 
 export default function Home() {
   return (

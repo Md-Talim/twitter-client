@@ -1,10 +1,9 @@
 import { sidebarLinks } from "@/constants";
-import Logo from "./Logo";
+import Logo from "./logo";
 
 const LeftSidebar = () => (
   <div className="space-y-6 pl-40 pr-20">
     <Logo />
-
     {/* Navigation / Sidebar Links */}
     <nav className="text-2xl">
       <ul className="flex flex-col gap-y-3">
