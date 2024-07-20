@@ -1,7 +1,7 @@
 import { IconType } from "react-icons";
 import {
   RiBellFill,
-  RiBookMarkLine,
+  RiBookMarkedLine,
   RiHashtag,
   RiHome7Fill,
   RiMessage2Fill,
@@ -32,7 +32,7 @@ export const sidebarLinks: SidebarLink[] = [
   },
   {
     title: "Bookmarks",
-    Icon: RiBookMarkLine,
+    Icon: RiBookMarkedLine,
   },
   {
     title: "Profile",
