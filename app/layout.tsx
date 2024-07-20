@@ -1,6 +1,7 @@
 import LeftSidebar from "@/components/left-sidebar";
+import RightSidebar from "@/components/right-sidebar";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import type { Metadata } from "next";
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -17,23 +18,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const googleClientId = process.env.GOOGLE_CLIENT_ID;
+
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="grid min-h-screen grid-cols-12">
-          <section className="col-span-3">
-            <LeftSidebar />
-          </section>
+    <GoogleOAuthProvider clientId={googleClientId!}>
+      <html lang="en">
+        <body className={inter.className}>
+          <div className="grid min-h-screen grid-cols-12">
+            <section className="col-span-3">
+              <LeftSidebar />
+            </section>
 
-          {/* Home Feed */}
-          <section className="col-span-4 border-l border-r border-gray-600">
-            {children}
-          </section>
+            {/* Home Feed */}
+            <section className="col-span-4 border-l border-r border-gray-600">
+              {children}
+            </section>
 
-          {/* Right Sidebar */}
-          <section className="col-span-5">Right Sidebar</section>
-        </div>
-      </body>
-    </html>
+            {/* Right Sidebar */}
+            <section className="col-span-5">
+              <RightSidebar />
+            </section>
+          </div>
+        </body>
+      </html>
+    </GoogleOAuthProvider>
   );
 }

@@ -2,7 +2,7 @@ import { sidebarLinks } from "@/constants";
 import Logo from "./logo";
 
 const LeftSidebar = () => (
-  <div className="space-y-6 pl-40 pr-20">
+  <div className="mx-auto max-w-40 space-y-6">
     <Logo />
     {/* Navigation / Sidebar Links */}
     <nav className="text-2xl">
