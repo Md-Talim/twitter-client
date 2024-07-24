@@ -1,8 +1,9 @@
 import { sidebarLinks } from "@/constants";
 import Logo from "./logo";
+import Profile from "./profile";
 
 const LeftSidebar = () => (
-  <div className="mx-auto max-w-40 space-y-6">
+  <div className="relative mx-auto h-screen space-y-6 md:px-4 lg:px-20">
     <Logo />
     {/* Navigation / Sidebar Links */}
     <nav className="text-2xl">
@@ -27,6 +28,10 @@ const LeftSidebar = () => (
         Post
       </button>
     </div>
+
+    <section className="absolute bottom-5 w-full">
+      <Profile />
+    </section>
   </div>
 );
 

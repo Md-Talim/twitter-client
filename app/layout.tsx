@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
+import { TanstackQueryProvider } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,23 +26,22 @@ export default function RootLayout({
     <GoogleOAuthProvider clientId={googleClientId!}>
       <html lang="en">
         <body className={inter.className}>
-          <div className="grid min-h-screen grid-cols-12">
-            <section className="col-span-3">
-              <LeftSidebar />
-            </section>
-
-            {/* Home Feed */}
-            <section className="col-span-4 border-l border-r border-gray-600">
-              {children}
-            </section>
-
-            {/* Right Sidebar */}
-            <section className="col-span-5">
-              <RightSidebar />
-            </section>
-          </div>
-
-          <Toaster />
+          <TanstackQueryProvider>
+            <div className="grid min-h-screen grid-cols-12">
+              <section className="col-span-3">
+                <LeftSidebar />
+              </section>
+              {/* Home Feed */}
+              <section className="col-span-4 border-l border-r border-gray-600">
+                {children}
+              </section>
+              {/* Right Sidebar */}
+              <section className="col-span-5">
+                <RightSidebar />
+              </section>
+            </div>
+            <Toaster />
+          </TanstackQueryProvider>
         </body>
       </html>
     </GoogleOAuthProvider>
